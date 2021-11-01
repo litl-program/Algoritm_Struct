@@ -7,7 +7,6 @@ def horner(poly, n, x):
 		result = result*x + poly[i]
 	return result
   
-
 poly = [2, -6, 2, -7]
 x = 3
 n = len(poly)
