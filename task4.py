@@ -20,5 +20,7 @@ result = getMaxPos([1,32,4,32,12,3,23,233,4,3,4,3,2,3,4,5,6,7,23,1,31,32,3])
 
 print(result);
 
+# def getMaxPosRex():
+	
 
 
