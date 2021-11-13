@@ -10,8 +10,11 @@ def GetArray(lenght):
 		i+=1
 	return Array;
 
-m = int(input("m = "));
-n = int(input("n = "));
+# m = int(input("m = "));
+# n = int(input("n = "));
+# m = 100;
+# n = 100;
+
 
 # A = GetArray(m);
 # B = GetArray(n);
@@ -34,6 +37,23 @@ def	Rodgers(A,B):
 
 print("Числа що задовільняють умові! ", Rodgers(A,B),"\n\n");
 
+def Rodgers3(A,B):
+	print("Work is Rodgers3:\n")
+	serArB = sum(B)/len(B);
+	serArA = sum(A)/len(A);
+	for	i in range(len(A)):
+		for j in range(len(B)):
+			A[i],B[j] = B[j],A[i];
+			newSerArB = sum(B)/len(B);
+			newSerArA = sum(A)/len(A);
+			if(newSerArB > serArB and newSerArA > serArA):
+				print(f"A = {B[j]} and B = {A[i]} задовільняють умову")
+			A[i],B[j] = B[j],A[i];
+		
+
+
+Rodgers3(A,B);
+
 
 def Rodgers2(A,B):
 	A.sort(); B.sort();
@@ -46,27 +66,12 @@ def Rodgers2(A,B):
 			result.append(A[i])
 			B.append(A[i])
 			A.pop(i);
+			i-=1;
 		i+=1
 	return result;
 
-print("Вибірка чисел що задовільняють умові 2.",Rodgers2(A,B)
+print("\n\nВибірка чисел що задовільняють умові 2.",Rodgers2(A,B)
 ,"\n\n");
 
 
 
-def Rodgers3(A,B):
-	A.sort(); B.sort();
-	print("Work is last:\n")
-	serArB = sum(B)/len(B);
-	serArA = sum(A)/len(A);
-	for	i in range(len(A)):
-		for j in range(len(B)):
-			A[i],B[j] = B[j],A[i];
-			newSerArB = sum(B)/len(B);
-			newSerArA = sum(A)/len(A);
-			if(newSerArB > serArB and newSerArA > serArA):
-				print(f"A = {B[j]} and B = {A[i]} задовільняють умову")
-			A[i],B[j] = B[j],A[i];
-
-
-Rodgers3(A,B);

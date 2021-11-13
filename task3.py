@@ -3,7 +3,7 @@
 k  =int(input("k = "));
 m = int(input("m = "));
 
-caunt_repit = 2**m+1
+caunt_repit = 2**m
 result = 0;
 i = 0;
 
