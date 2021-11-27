@@ -4,9 +4,8 @@
 def horner(poly, n, x):
 	result = poly[0] 
 	for i in range(1, n):
-		result = result + x * poly[i]
-	return result
-  
+		result = result + (poly[i])*x**i# * (x*i)
+	return result 
 poly = [1,-9,5,-2]
 x = 4
 n = len(poly)
@@ -18,7 +17,7 @@ def hornerRecurs(poly, x, i =1,result =0):
 	try:
 		if(i ==1):
 			result = poly[0];
-		result = result+x * poly[i];
+		result = result+poly[i]*x**i#*(x*i);
 		return hornerRecurs(poly, x, i+1,result);
 	except:
 		return result;
