@@ -1,30 +1,27 @@
-A = [1,5,7,2,4,2,6,6,7,8,6,7]
+A = [2,1]
 
 
 
-def getMaxPos(Array):
-	if(len(Array)==1):
-		return Array;
-	result = [];
-	start = 0;
-	i = 1;
-	while(i<len(Array)):
-		if(Array[i-1] <= Array[i]):	
-			i+=1
-			continue;
+def getMaxPosRecurs(Array):
+	try:
+		newArray = [int(Array[0])]
+	except IndexError:
+		return []
+	for i in range(1, len(Array)):
+		Array[i] = int(Array[i])
+		if(Array[i]>=newArray[-1]):
+			newArray.append(Array[i])
 		else:
-			result.append(Array[start:i])
-			start = i;
-			i+=1;
-	if(len(result) == 0):
-		return Array;
-	print(result);
-	arraylist = [len(result[i]) for	i in range(len(result))];
-	maxiter = max(arraylist);
-	index = arraylist.index(maxiter);
-	return result[index];
+			newArray2 = getMaxPosRecurs(Array[i::].copy())
+			if(len(newArray)>len(newArray2)):
+				return newArray;
+			else:
+				return newArray2;
+	return newArray;
 
-result = getMaxPos([1,2])
+
+
+result = getMaxPosRecurs(A)
 
 print(result);
 

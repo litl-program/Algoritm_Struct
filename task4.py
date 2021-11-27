@@ -14,6 +14,8 @@ def getMaxPos(Array):
 	while(i<len(Array)):
 		if(Array[i-1] <= Array[i]):	
 			i+=1
+			if(i == len(Array)):
+				result.append(Array[start:i])	
 			continue;
 		else:
 			result.append(Array[start:i])
@@ -27,7 +29,7 @@ def getMaxPos(Array):
 	index = arraylist.index(maxiter);
 	return result[index];
 
-result = getMaxPos(A)
+result = getMaxPos([1])
 
 print(result);
 

@@ -1,8 +1,10 @@
+# Чи належить число ряду фібоначі
+
 N = int(input());
 
 
 def GetFibonachi(N):
-	i = 2;
+	i = 1;
 	first = 0;
 	midle = 1;
 	second = 0;

@@ -35,14 +35,18 @@ def FromArray(Array):
 
 #[2,1,1,16,6]
 # print(FromCaunt([2,1,1,16,6]))
-print(FromFloat(2.515))
 
-print(FromArray(FromFloat(2.515)))
+caunt = float(input());
+
+print(FromFloat(caunt))
+
+print(FromArray(FromFloat(caunt)))
 
 
-print(FromFloat(1.23))
 
-print(FromArray(FromFloat(1.23)))
+
+
+
 
 
 

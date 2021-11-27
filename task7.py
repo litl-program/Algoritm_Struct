@@ -1,8 +1,8 @@
 from math import sqrt
 from itertools import count, islice
 
-a = 71;
-b = 340;
+a = int(input("m = "));
+b = int(input("n = "));
 
 print(a,"/",b)
 
@@ -29,7 +29,7 @@ def izi_veapen(caunt):
 				result.append([i,loot]);
 				loot = 0;
 		i+=1;
-		if(work == 1):
+		if(work == 1 and i>10):
 			break;
 	return result;
 

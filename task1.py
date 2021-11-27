@@ -111,7 +111,7 @@ def vectorOrthogonalization(vectorsList):
 N = int(input("Enter number: "))
 numericalVectorsList = createVectorsArray(N)
 
-numericalVectorsList = [[1, 1, 1], [1, 2, 0], [0, -1, 2]] # Незалежні
+#numericalVectorsList = [[1, 1, 1], [1, 2, 0], [0, -1, 2]] # Незалежні
 
 print(f"\n___<Generated vectors>___\n{numericalVectorsList}")
 
@@ -131,6 +131,3 @@ else:
 # numericalVectorsList = [[1, 1, 1], [1, 2, 0], [0, -1, 1]] # Залежні
 # numericalVectorsList = [[0, 1, 2], [1, 0, 1], [-1, 2, 4]] # Незалежні
 
-# Дод. матеріали
-#  http://ua.onlinemschool.com/math/library/vector/linear-independence/
-#  https://yukhym.com/uk/vektori/dovesty-shcho-vektory-utvoriuiut-bazys.html

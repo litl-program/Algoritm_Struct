@@ -35,7 +35,7 @@ def	Rodgers(A,B):
 			result.append(A[i]);
 	return result;
 
-print("Числа що задовільняють умові! ", Rodgers(A,B),"\n\n");
+print("Числа що задовільняють умові 1! ", Rodgers(A,B),"\n\n");
 
 def Rodgers3(A,B):
 	print("Work is Rodgers3:\n")
